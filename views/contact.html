@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Us</title>
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+    <link rel="preload" as="image" href="/images/hero-bg.jpg">
+    <link rel="stylesheet" href="/contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="/images/logo.png" width="128" height="63" alt="AutoElite Contact-Us">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link" id="aboutButton">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="navbar-link" id="servicesButton">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                    </li>
+                    <li id="billingLink" style="display: none;"><a href="billing.html" class="navbar-link">Billing</a></li>
+                    <li id="usersLink" style="display: none;"><a href="users.html" class="navbar-link">Users</a></li>
+                    <li class="dropdown" id="userDropdown" style="display: none;">
+                        <a href="#" class="navbar-link">User</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="experience.html" class="navbar-link">My Experience</a></li>
+                            <li><a href="appointment.html" class="navbar-link" id="appointmentButton">Book Appointment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="login.html" id="loginButton" class="btn btn-login" >
+                <span class="span" id="loginButtonText">Login</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <button class="toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+        </div>
+    </header>
+    
+    <main>
+        <article>
+            <section id="contact-first" class="has-image" aria-label="home" style="background-image:url('/images/contact-img.jpg')">
+                <div class="container">
+                    <div class="section-text">
+                        <h1>Contact Us...</h1>
+                    </div>
+                </div>
+                
+            </section>
+            <section id="contact-second" >
+                <div class="container">
+                    <div id="map"></div>
+                </div>
+                
+            </section>
+            <section id="contact-third" >
+                <div class="container">
+                    <div id="services-section">
+                        <h1>Our Services</h1>
+                        <div class="services-cards">
+                            <a href="services.html#oil-change" class="service-card" data-animate="fade-in">
+                                <img src="/images/service1.jpg" alt="service1">
+                                <h2>Oil Change</h2>
+                            </a>
+                            <a href="services.html#tire-repair" class="service-card" data-animate="fade-in">
+                                <img src="/images/service2.jpg" alt="service2">
+                                <h2>Tire Repair</h2>
+                            </a>
+                            <a href="services.html#engine-repair" class="service-card" data-animate="fade-in">
+                                <img src="/images/service3.jpg" alt="service3">
+                                <h2>Engine Repair</h2>
+                            </a>
+                            <a href="services.html#steering-repair" class="service-card" data-animate="fade-in">
+                                <img src="/images/service4.jpg" alt="service4">
+                                <h2>Steering Repair</h2>
+                            </a>
+                            <a href="services.html#brake-repair" class="service-card" data-animate="fade-in">
+                                <img src="/images/service5.jpg" alt="service5">
+                                <h2>Brake Repair</h2>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </section>
+
+        </article>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span" id="span-time">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span" id="span-time">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="./images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        "use strict"
+        const navbar = document.querySelector("[data-navbar]");
+        const navToggler = document.querySelector("[data-nav-toggler]");
+
+    navToggler.addEventListener("click", function(){
+        navbar.classList.toggle("active");
+        this.classList.toggle("active");
+    });
+
+    async function initMap() {
+        const map = L.map("map").setView([45.4972159, -73.8204037], 13);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: ""
+        }).addTo(map);
+
+        L.marker([45.4972159, -73.8204037]).addTo(map)
+            .bindPopup('<div class="custom-popup">AUTOELITE<br><a href="https://www.google.com/maps?q=3354+Sources+Blvd,+Dollard-Des+Ormeaux,+Quebec" target="_blank">3354 Sources Blvd<br>Dollard-Des Ormeaux, Quebec</a></div>')
+            .openPopup();
+    }
+
+    async function initPage() {
+        const token = localStorage.getItem("token");
+        const loginButton = document.getElementById("loginButton");
+        const loginButtonText = document.getElementById("loginButtonText");
+        const billingLink = document.getElementById("billingLink");
+        const usersLink = document.getElementById("usersLink");
+        const userDropdown = document.getElementById("userDropdown");
+
+        if (token) {
+            loginButtonText.textContent = "Logout";
+            loginButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                localStorage.removeItem("token");
+                window.location.href = "/";
+            });
+
+            try {
+                const response = await fetch("/api/auth/me", {
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+                const userData = await response.json();
+                if (userData.userType === "admin") {
+                    billingLink.style.display = "block";
+                    usersLink.style.display = "block";
+                }
+                if (userData.userType === "customer"){
+                    userDropdown.style.display = "block";
+                }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        } else {
+            loginButtonText.textContent = "Login";
+            loginButton.href = "login.html";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+        initMap();
+        initPage();
+    });
+
+    const observer = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.1});
+    document.querySelectorAll(".service-card").forEach(card=>{
+        observer.observe(card);
+    });
+    </script>
+
+</body>
+</html>

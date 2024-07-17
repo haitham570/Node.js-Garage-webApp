@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="/login_style.css">
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+    <link rel="preload" as="image" href="/images/hero-bg.jpg">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="/images/logo.png" width="128" height="63" alt="AutoElite home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link" id="homeButton">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link" id="aboutButton">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="navbar-link" id="servicesButton">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link" id="contactButton">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+
+        </div>
+    </header>
+    <main>
+        <main>
+            <article>
+                <section class="hero has-bg-image" aria-label="home" style="background-image:url('/images/hero-bg.jpg')">
+                    <div class="container">
+                        <div class="hero-content">
+                            
+                            <h1 class="h1 section-title">Welcome to Login</h1>
+                            <form id="loginForm" method="post">
+                                <label for="Email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                                <br>
+                                <button type="submit">Login</button>
+                                <br>
+                                <br>
+                                <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                                <br>
+                                <label for="Email">Don't have an account?</label>
+                            </form>
+                            
+                            <a href="#" class="btn" id="registerButton">
+                                <span class="span">Register</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
+                        </div>
+    
+                        <figure class="hero-banner" style="--width: 1228; --height: 789;">
+                            <img src="/images/hero-banner.png" width="1228" height="789" alt="golden motor vehicle"
+                            class="move-anim">
+                        </figure>
+                    </div>
+                </section>
+                <div id="forgotPasswordPopup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>Recover Password</h2>
+                        <form id="recoverPasswordForm">
+                            <label for="recoverEmail">Email:</label>
+                            <input type="email" id="recoverEmail" name="recoverEmail" required>
+                            <br>
+                            <label for="securityAnswer">Security Answer:</label>
+                            <input type="text" id="securityAnswer" name="securityAnswer" required>
+                            <br>
+                            <label for="newPassword">New Password:</label>
+                            <input type="password" id="newPassword" name="newPassword" required>
+                            <br>
+                            <button type="submit">Recover Password</button>
+                        </form>
+                    </div>
+                </div>
+    </main>
+    
+    <footer class="footer" id="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="/images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit",
+        async(event)=>{
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const response = await fetch("/api/auth/login",{
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({email, password})
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    toastr.error("Login failed: " + errorData.msg);
+                    return;
+                }
+                const data = await response.json();
+                toastr.success("Login successful");
+
+                localStorage.setItem("token", data.token);
+
+                setTimeout(()=>{
+                    window.location.href = "index.html";
+                }, 2000);
+
+            }catch (error) {
+                console.error("Error during login:", error);
+                toastr.error("An error occurred during login");
+            }
+            
+        });
+
+        document.getElementById("registerButton").addEventListener("click", (event)=>{
+            event.preventDefault();
+            window.location.href = "register.html";
+        });
+
+        document.getElementById("forgotPasswordLink").addEventListener("click", (event)=>{
+            event.preventDefault();
+            document.getElementById("forgotPasswordPopup").style.display = "block";
+        });
+
+        document.querySelector(".close").addEventListener("click", ()=>{
+            document.getElementById("forgotPasswordPopup").style.display = "none";
+        });
+
+        window.addEventListener("click", (event)=>{
+            if(event.target == document.getElementById("forgotPasswordPopup")) {
+                document.getElementById("forgotPasswordPopup").style.display = "none";
+            }
+        });
+
+        document.getElementById("recoverPasswordForm").addEventListener("submit", async (event)=>{
+            event.preventDefault();
+
+            const email = document.getElementById("recoverEmail").value;
+            const securityAnswer = document.getElementById("securityAnswer").value;
+            const newPassword = document.getElementById("newPassword").value;
+
+            try {
+                const response = await fetch("/api/auth/recover-password", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({email, securityAnswer, newPassword})
+                });
+
+                if (!response.ok){
+                    const errorData = await response.json();
+                    toastr.error("Password recovery failed: " + errorData.msg);
+                    return;
+                }
+
+                toastr.success("Password updated successfully. Please login with your new password.");
+                document.getElementById("forgotPasswordPopup").style.display = "none";
+
+            }catch{
+                console.error("Error during password recovery: ", error);
+                toastr.error("An error occurred during password recovery");
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

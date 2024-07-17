@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/appointment.css">
+    <link rel="stylesheet" href="/services.css">
+
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+    <link rel="preload" as="image" href="/images/hero-bg.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" width="128" height="63" alt="AutoElite home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link" id="homeButton">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link" id="aboutButton">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="navbar-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                    </li>
+                    <li id="billingLink" style="display: none;"><a href="billing.html" class="navbar-link">Billing</a></li>
+                    <li id="usersLink" style="display: none;"><a href="users.html" class="navbar-link">Users</a></li>
+                    
+                    <li class="dropdown" id="userDropdown" style="display: none;">
+                        <a href="#" class="navbar-link">User</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="experience.html" class="navbar-link" id="experienceButton">My Experience</a></li>
+                            <li><a href="appointment.html" class="navbar-link" id="appointmentButton">Book Appointment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="login.html" id="loginButton" class="btn btn-primary" >
+                <span class="span" id="loginButtonText">Login</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="hero has-bg-image" aria-label="home" style="background-image:url('hero-bg.jpg')">
+                <div class="container">
+                    <div class="hero-content">
+                        
+                        <h1 class="h1 section-title">High Quality Services with Great Prices.</h1>
+
+                        <p class="section-text">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+                        </p>
+                    </div>
+
+                    
+                </div>
+            </section>
+            <section class="service-section" id="oil-change">
+                <div class="container" id="oil-change">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="/images/service1.jpg" alt="Service 1">
+                        </div>
+                        <div class="service-text">
+                            <h2>Oil Change</h2>
+                            <p>Details about service 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                            <a href="#" class="btn" data-service="Oil Change">
+                                <span class="span">Check Prices</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a> 
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-section" id="reverse-section">
+                <div class="container" id="tire-repair">
+                    <div class="service-content reverse">
+                        <div class="service-image">
+                            <img src="/images/service2.jpg" alt="Service 2">
+                        </div>
+                        <div class="service-text">
+                            <h2>Tire Repair</h2>
+                            <p>Details about service 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                            <a href="#" class="btn" data-service="Tire Repair">
+                                <span class="span">Check Prices</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="service-section">
+                <div class="container" id="engine-repair">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="/images/service3.jpg" alt="Service 3">
+                        </div>
+                        <div class="service-text">
+                            <h2>Engine Repair</h2>
+                            <p>Details about service 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                            <a href="#" class="btn" data-service="Engine Repair">
+                                <span class="span">Check Prices</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service-section" id="reverse-section">
+                <div class="container" id="steering-repair">
+                    <div class="service-content reverse">
+                        <div class="service-image">
+                            <img src="/images/service4.jpg" alt="Service 4">
+                        </div>
+                        <div class="service-text">
+                            <h2>Steering Repair</h2>
+                            <p>Details about service 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                            <a href="#" class="btn" data-service="Steering Repair">
+                                <span class="span">Check Prices</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service-section">
+                <div class="container" id="brake-repair">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="/images/service5.jpg" alt="Service 5">
+                        </div>
+                        <div class="service-text">
+                            <h2>Brake Repair</h2>
+                            <p>Details about service 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                            <a href="#" class="btn" data-service="Brake Repair">
+                                <span class="span">Check Prices</span>
+    
+                                <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <div id="pricePopup" class="pricePopup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2> Price List</h2>
+            <div id="priceList"></div>
+            <div class="adminOnly" style="display: none;">
+                <div class="button-group">
+                    <button id="addPrice">Add Price</button>
+                    <button id="editPrice">Edit Price</button>
+                    <button id="deletePrice">Delete Price</button>
+                </div>
+            </div>
+            <form id="addPriceForm" class="priceForm" style="display: none;">
+                <h3>Add Price</h3>
+                <label for="newDescription">Description:</label>
+                <input type="text" id="newDescription" required>
+                <label for="newAmount">Amount:</label>
+                <input type="number" id="newAmount" required>
+                <button type="submit">Add</button>
+            </form>
+            <form id="editPriceForm" class="priceForm" style="display: none;">
+                <h3>Edit Price</h3>
+                <label for="editSelect">Select Price</label>
+                <select id="editSelect" required></select>
+                <label for="editDescription">Description</label>
+                <input type="text" id="editDescription" required>
+                <label for="editAmount">Amount:</label>
+                <input type="number" id="editAmount" required>
+                <button type="submit">Save</button>
+            </form>
+            <form id="deletePriceForm" class="priceForm" style="display: none;">
+                <h3>Delete Price</h3>
+                <label for="deleteSelect">Select Price</label>
+                <select id="deleteSelect" required></select>
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span" id="span-time">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span" id="span-time">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="./images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        "use strict";
+
+        const navbar = document.querySelector("[data-navbar]");
+        const navToggler = document.querySelector("[data-nav-toggler]");
+
+        navToggler.addEventListener("click", function(){
+            navbar.classList.toggle("active");
+            this.classList.toggle("active");
+        });
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const token = localStorage.getItem("token");
+            const loginButton = document.getElementById("loginButton");
+            const loginButtonText = document.getElementById("loginButtonText");
+            const billingLink = document.getElementById("billingLink");
+            const pricePopup = document.getElementById("pricePopup");
+            const closePopupButton = document.querySelector(".popup-content .close");
+            const adminOnlyElements = document.querySelector('.adminOnly');
+            const addPriceForm = document.getElementById("addPriceForm");
+            const editPriceForm = document.getElementById("editPriceForm");
+            const deletePriceForm = document.getElementById("deletePriceForm");
+            const editSelect = document.getElementById("editSelect");
+            const deleteSelect = document.getElementById("deleteSelect");
+            let isAdmin = false;
+            let currentService = null;
+            if (token) {
+                loginButtonText.textContent = "Logout";
+                loginButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    localStorage.removeItem("token");
+                    window.location.href = "/";
+                });
+
+                
+                try {
+                    const response = await fetch("/api/auth/me", {
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    });
+                    const userData = await response.json();
+                    if (userData.userType === "admin") {
+                        billingLink.style.display = "block";
+                        usersLink.style.display = "block";
+                        adminOnlyElements.style.display = "block";
+                        isAdmin = true;
+                        
+                    }
+                    if(userData.userType === "customer"){
+                        userDropdown.style.display = "block";
+                    }
+                } catch (error) {
+                    console.error("Error fetching user data:", error);
+                }
+            } else {
+                loginButtonText.textContent = "Login";
+                loginButton.href = "login.html";
+            }
+
+            closePopupButton.addEventListener("click", () => {
+                pricePopup.style.display = "none";
+                document.getElementById("addPriceForm").style.display = "none";
+                document.getElementById("editPriceForm").style.display = "none";
+                document.getElementById("deletePriceForm").style.display = "none";
+            });
+
+            window.addEventListener("click", (event) => {
+                if(event.target === pricePopup) {
+                    pricePopup.style.display = "none";
+                    document.getElementById("addPriceForm").style.display = "none";
+                    document.getElementById("editPriceForm").style.display = "none";
+                    document.getElementById("deletePriceForm").style.display = "none";
+                }
+            });
+
+            async function showPrices(serviceName) {
+                try{
+                    const response = await fetch(`/api/services/prices/${serviceName}`,{
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    });
+                    const prices = await response.json();
+                    const priceList = document.getElementById("priceList");
+                    priceList.innerHTML = `<h3>${serviceName}</h3>`;
+                    editSelect.innerHTML = "";
+                    deleteSelect.innerHTML = "";
+
+                    prices.forEach(price => {
+                        const priceItem = document.createElement('div');
+                        priceItem.textContent = `${price.description}: $${price.amount}`;
+                        priceList.appendChild(priceItem);
+
+                        const option = document.createElement("option");
+                        option.value = price._id;
+                        option.textContent = price.description;
+                        editSelect.appendChild(option);
+
+                        const deleteOption = document.createElement("option");
+                        deleteOption.value = price._id;
+                        deleteOption.textContent = price.description;
+                        deleteSelect.appendChild(deleteOption);
+                    });
+
+                    currentService = serviceName;
+                    pricePopup.style.display = "block";
+                }catch(err){
+                    console.error("Error fetching prices:", err);
+                }
+            }
+
+            document.querySelectorAll(".btn[data-service]").forEach(button=>{
+                button.addEventListener("click", (event)=>{
+                    event.preventDefault();
+                    const serviceName = button.getAttribute("data-service");
+                    showPrices(serviceName);
+                });
+            });
+
+            if(isAdmin) {
+                document.getElementById("addPrice").addEventListener("click", ()=>{
+                    document.getElementById("addPriceForm").style.display = "block";
+                    document.getElementById("editPriceForm").style.display = "none";
+                    document.getElementById("deletePriceForm").style.display = "none";
+                });
+
+                document.getElementById("editPrice").addEventListener("click", ()=>{
+                    document.getElementById("addPriceForm").style.display = "none";
+                    document.getElementById("editPriceForm").style.display = "block";
+                    document.getElementById("deletePriceForm").style.display = "none";
+                });
+
+                document.getElementById("deletePrice").addEventListener("click", ()=>{
+                    document.getElementById("addPriceForm").style.display = "none";
+                    document.getElementById("editPriceForm").style.display = "none";
+                    document.getElementById("deletePriceForm").style.display = "block";
+                });
+
+                document.getElementById("addPriceForm").addEventListener("submit", async(event)=>{
+                    event.preventDefault();
+                    const serviceName = currentService;
+                    const description = document.getElementById("newDescription").value;
+                    const amount = document.getElementById("newAmount").value;
+                    console.log("Submitting new price:", { serviceName, description, amount });
+                    try{
+                        const response = await fetch (`/api/services/prices`,{
+                            method:"POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Authorization": `Bearer ${token}`
+                            },
+                            body: JSON.stringify({serviceName, description, amount})
+                        });
+                        const data = await response.json();
+                        console.log("Response from server:", data);
+                        if(response.ok){
+                            toastr.success("Price added successfully");
+                            showPrices(serviceName);
+                            document.getElementById("addPriceForm").style.display = "none";
+                        }else{
+                            const responseText = await response.text();
+                            console.error("Error response text:", responseText);
+                            toastr.error("Failed to add price"+ (data.msg || "Unknown error"));
+                        }
+                    }catch(err){
+                        console.error("Error adding price:", err);
+                    }
+                });
+
+                document.getElementById("editPriceForm").addEventListener("submit", async(event)=>{
+                    event.preventDefault();
+                    const priceId = editSelect.value;
+                    const description = document.getElementById("editDescription").value;
+                    const amount = document.getElementById("editAmount").value;
+                    console.log("Editing price:", { description, amount });
+                    try{
+                        const response = await fetch(`/api/services/prices/${priceId}`, {
+                            method: "PUT",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Authorization": `Bearer ${token}`
+                            },
+                            body: JSON.stringify({description, amount })
+                        });
+                        if (response.ok) {
+                            
+                            toastr.success("Price updated successfully");
+                            showPrices(currentService);
+                            document.getElementById("editPriceForm").style.display = "none";
+                        } else {
+                            const responseText = await response.text();
+                            console.error("Error response text:", responseText);
+                            toastr.error("Failed to update price"+ (data.msg || "Unknown error"));
+                        }
+                    }catch(err){
+                        console.error("Error editing price:", err);
+                    }
+                });
+
+                document.getElementById("deletePriceForm").addEventListener("submit", async(event)=>{
+                    event.preventDefault();
+                    const priceId = deleteSelect.value;
+                    console.log("Deleting price:", { priceId });
+                    try{
+                        const response = await fetch(`/api/services/prices/${priceId}`, {
+                            method: "DELETE",
+                            headers: {
+                                "Authorization": `Bearer ${token}`
+                            }
+                        });
+                        if (response.ok) {
+                            toastr.success("Price deleted successfully");
+                            showPrices(currentService);
+                            document.getElementById("deletePriceForm").style.display = "none";
+                        } else {
+                            const responseText = await response.text();
+                            console.error("Error response text:", responseText);
+                            toastr.error("Failed to delete price"+ (data.msg || "Unknown error"));
+                        }
+                    }catch(err){
+                        console.error("Error deleting price:", err);
+                    }
+                });
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

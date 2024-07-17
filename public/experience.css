@@ -1,0 +1,213 @@
+.user-profile{
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+.user-visits{
+    background-color: black;
+    padding: 50px 0;
+    border-top: 1px solid darkgray;
+}
+
+.user-profile h2, .user-visits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: darkorange;
+}
+.user-profile h2{
+    color: #000;
+}
+
+.user-profile p, .user-visits p {
+    font-size: 2.125rem;
+    line-height: 2.6;
+    color: black;
+}
+
+
+.user-profile .profile-item {
+    display: flex; /* Make the profile item flex container */
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: darkorange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000; /* Add border */
+    border-radius: 30px;
+}
+
+.user-profile .profile-item p {
+    margin: 0; 
+    flex: 1;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.user-profile .profile-item p .span-profile-item {
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+.user-profile button {
+    margin-left: 10px;
+    padding: 10px 30px;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-profile button:hover {
+    background-color: white ;
+    color: #000;
+}
+
+.user-visits select {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.user-visits #visitDetails {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.user-visits li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.user-visits a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.user-visits a:hover {
+    background-color: darkorange;
+}
+
+.user-visits textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.user-visits button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.75rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-visits button:hover {
+    background-color: darkorange;
+}
+
+#visitDetails table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#visitDetails th, #visitDetails td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#visitDetails th {
+    background-color: black;
+    color: white;
+}
+
+#visitDetails td table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#visitDetails td table th, #visitDetails td table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: left;
+}
+
+#visitDetails td table th {
+    background-color: black;
+    color: white;
+}
+
+#feedbackSection {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+
+#feedbackSection h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+#feedbackSection form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedbackSection label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#feedbackSection textarea {
+    resize: vertical;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#feedbackSection button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.75rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#feedbackSection button:hover {
+    background-color: darkorange;
+}
+
+
+
+
+

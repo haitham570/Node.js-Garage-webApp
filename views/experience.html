@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience</title>
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="experience.css">
+
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+    <link rel="preload" as="image" href="/images/hero-bg.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="/images/logo.png" width="128" height="63" alt="AutoElite home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link" id="homeButton">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link" id="aboutButton">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="navbar-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link">User</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="experience.html" class="navbar-link" id="experienceButton">My Experience</a></li>
+                            <li><a href="appointment.html" class="navbar-link" id="appointmentButton">Book Appointment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="login.html" id="loginButton" class="btn btn-primary" >
+                <span class="span" id="loginButtonText">Login</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+
+        </div>
+    </header>
+    <main>
+        <article>
+            <section class="hero has-bg-image" aria-label="home" style="background-image:url('/images/car-customer-experience.jpg')">
+                <div class="container">
+                    <div class="hero-content">
+                        
+                        
+
+                        <p class="section-text">
+                            Experience unparalleled service and care at Autoelite Inc, where our skilled team ensures your vehicle's 
+                            best performance and your complete satisfaction
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="user-profile">
+                <div class="container">
+                    <h2>User Profile</h2>
+                    <div class="profile-item">
+                        <p>Name: <span id="userName" class="span-profile-item">John Doe</span></p> 
+                        <button onclick="editProfile('userName')">Edit</button>
+                    </div>
+                    <div class="profile-item">
+                        <p>Email: <span id="userEmail" class="span-profile-item">john.doe@example.com</span></p> 
+                        <button onclick="editProfile('userEmail')">Edit</button>
+                    </div>
+                    <div class="profile-item">
+                        <p>Phone: <span id="userPhone" class="span-profile-item">+1 234 567 8901</span></p> 
+                        <button onclick="editProfile('userPhone')">Edit</button>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="user-visits">
+                <div class="container">
+                    <h2>Past Visits</h2>
+                    <div id="visitDetails">
+                        <!-- Visit details will be displayed here based on the selected date -->
+                    </div>
+                    <div id="feedbackSection" style="display: none;">
+                        <h3>We value your feedback</h3>
+                        <form id="feedbackForm">
+                            <label for="feedback">Please leave your feedback:</label>
+                            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+                            <br>
+                            <button type="submit" id="submitFeedback">Submit Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span" id="span-time">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span" id="span-time">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="./images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        "use strict";
+    
+        const navbar = document.querySelector("[data-navbar]");
+        const navToggler = document.querySelector("[data-nav-toggler]");
+    
+        navToggler.addEventListener("click", function () {
+            navbar.classList.toggle("active");
+            this.classList.toggle("active");
+        });
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const token = localStorage.getItem("token");
+            const loginButton = document.getElementById("loginButton");
+            const loginButtonText = document.getElementById("loginButtonText");
+
+            if (token) {
+                loginButtonText.textContent = "Logout";
+                loginButton.addEventListener("click", (event)=>{
+                    event.preventDefault();
+                    localStorage.removeItem("token");
+                    window.location.href = "/";
+                });
+
+                fetch("/api/auth/me",{
+                    method: "GET",
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data) {
+                        document.getElementById("userName").textContent = data.name;
+                        document.getElementById("userEmail").textContent = data.email;
+                        document.getElementById("userPhone").textContent = data.phone;
+                        loadUserInvoices(data.email);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching user data:", error);
+                });
+            }else {
+                loginButtonText.textContent = "Login";
+                loginButton.href = "login.html"; 
+            }
+
+            async function loadUserInvoices(userEmail) {
+                try{
+                    const response = await fetch(`/api/invoices`,{
+                        headers: {
+                            "Authorization": `Bearer ${localStorage.getItem("token")}`
+                        }
+                    });
+    
+                    if(!response.ok){
+                        throw new Error(`Failed to fetch invoice: ${response.statusText}`);
+                    }
+    
+                    const invoices = await response.json();
+                    const userInvoices = invoices.filter(invoice => invoice.email === userEmail);
+                    const visitDetailsDiv = document.getElementById("visitDetails");
+                    const feedbackSection = document.getElementById("feedbackSection");
+    
+                    if(userInvoices.length === 0){
+                        visitDetailsDiv.innerHTML = "<p>We Are Waiting For Your First Visit. </p>";
+                        feedbackSection.style.display = "none";
+                        return
+                    }
+    
+                    visitDetailsDiv.innerHTML = `
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>Invoice ID</th>
+                                <th>Client Name</th>
+                                <th>Email</th>
+                                <th>Date</th>
+                                <th>Labor Cost</th>
+                                <th>Tax</th>
+                                <th>Total</th>
+                                <th>Items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${userInvoices.map(invoice => `
+                                <tr>
+                                    <td>${invoice.InvoiceId}</td>
+                                    <td>${invoice.clientName}</td>
+                                    <td>${invoice.email}</td>
+                                    <td>${new Date(invoice.date).toLocaleDateString()}</td>
+                                    <td>${(invoice.laborCost || 0).toFixed(2)}</td>
+                                    <td>${(invoice.tax || 0).toFixed(2)}</td>
+                                    <td>${(invoice.total || 0).toFixed(2)}</td>
+                                    <td>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Description</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                ${invoice.items.map(item => `
+                                                    <tr>
+                                                        <td>${item.description}</td>
+                                                        <td>${item.quantity}</td>
+                                                        <td>${(item.price || 0).toFixed(2)}</td>
+                                                    </tr>
+                                                `).join('')}
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                    
+                    `;
+
+                    feedbackSection.style.display = "block";
+    
+    
+                }catch(err){
+                    console.error("Error fetching invoice:", err);
+                    document.getElementById("visitDetails").innerHTML = "<p>Error loading invoices. </p>";
+                }
+            }
+            
+            document.getElementById("feedbackForm").addEventListener("submit", async(event)=>{
+                event.preventDefault();
+                const feedback = document.getElementById("feedback").value;
+
+                try{
+                    const response = await fetch("/api/auth/submit-feedback", {
+                        method: "PUT",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${localStorage.getItem("token")}`
+                        },
+
+                        body: JSON.stringify({feedback})
+                    });
+
+                    if(!response.ok){
+                        throw new Error("Failed to submit feedback");
+                    }
+
+                    toastr.success("Feedback submitted successfully");
+                    document.getElementById("feedback").value=""
+                }catch(err){
+                    console.error("Error submitting feedback", err);
+                    toastr.error("Failed to submit feedback: " + error.message);
+                }
+            });
+       
+        });
+
+        async function editProfile(field) {
+            const span = document.getElementById(field);
+            const currentValue = span.textContent;
+            span.outerHTML = `<input type="text" id="${field}" value="${currentValue}" />`;
+            document.querySelector(`button[onclick="editProfile('${field}')"]`).outerHTML = 
+            `<button onclick="saveProfile('${field}')">Save</button>`;
+
+        }
+
+        async function saveProfile(field) {
+            const token = localStorage.getItem("token");
+            const input = document.getElementById(field);
+            const newValue = input.value;
+            input.outerHTML = `<span id="${field}">${newValue}</span>`;
+            document.querySelector(`button[onclick="saveProfile('${field}')"]`).outerHTML = 
+            `<button onclick="editProfile('${field}')">Edit</button>`;
+            const name = document.getElementById("userName").textContent;
+            const email = document.getElementById("userEmail").textContent;
+            const phone = document.getElementById("userPhone").textContent;
+
+            try{
+                const response = await fetch("/api/auth/update-profile",{
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({name, email, phone})
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to update profile");
+                }
+                const updateUser = await response.json();
+                console.log("Profile updated successfully", updateUser);
+                toastr.success("Profile updated successfully");
+            }catch (error){
+                console.error("Error updating profile", error);
+                toastr.error("Failed to update profile: " + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+
+.users-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+#content-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+}
+#content-users {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+}
+#content-users h1 {
+    color: darkorange;
+    text-align: center;
+    margin-top: 15rem;
+}
+#table-container {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+#table-container table {
+    max-width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    overflow: auto;
+    
+}
+
+#table-container table th, table td {
+    border: 3px solid black;
+    padding: 1.75rem;
+    text-align: center;
+    color: darkorange;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.85rem;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#table-container table td {
+    text-transform:lowercase;
+}
+
+#table-container table th {
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+}
+
+
+
+#table-container table tr:nth-child(even) {
+    background-color: none;
+}
+
+#table-container table tr:hover {
+    color:  white;
+    cursor: pointer;
+}
+
+#table-container .action-btn {
+    color: black;
+    font-style: bold;
+    text-decoration: underline;
+    background: none;
+    display: inline-block;
+}
+#table-container .action-btn:hover {
+    color:  darkorange;
+    cursor: pointer;
+}
+
+#deleteFeedbackButton {
+    display: none;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#deleteFeedbackButton:hover {
+    background-color: darkorange;
+}
+body.freeze-scroll {
+    overflow: hidden;
+}
+#feedbackPopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+#feedbackPopup .popup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+#feedbackPopup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#feedbackPopup .close:hover,
+#feedbackPopup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#feedbackPopup h2 {
+    margin-bottom: 20px;
+}
+
+#feedbackPopup #feedbackDetails {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+#appointmenth1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    
+}
+
+#appointment-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar {
+    margin-top: 2rem;
+    max-height: 600px;
+    max-width: 1260px;
+    overflow-y: auto; 
+    overflow-x: auto;
+}
+
+#calendarTable {
+    max-width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#calendarTable th, #calendarTable td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#calendarTable th {
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+#calendarTable tbody td {
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+#calendarTable td:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.appointmentPopup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: lowercase;
+}
+
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    color: black
+}
+
+.appointmentPopup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.appointmentPopup .close:hover,
+.appointmentPopup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: none;
+    padding: 10px 0;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    max-width: 500px;
+    background: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.hero-content input, .hero-content select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.hero-content button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkorange;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+   
+}
+
+.hero-content button:hover {
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer .footer-top {
+    padding: 20px 0;
+}
+
+.footer .footer-brand {
+    margin-bottom: 20px;
+}
+
+.footer .social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer .social-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-text {
+    margin-bottom: 20px;
+}
+
+.footer .footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.footer .copyright {
+    margin: 0;
+    text-align: center;
+}
+
+#forgotPasswordLink{
+    color: white;
+    background-color: none;
+    text-decoration: underline;
+}
+#forgotPasswordLink:is(:hover, :focus-visible){
+    color: darkorange;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: 15%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content form label {
+    margin: 10px 0 5px;
+}
+
+.popup-content form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content form button {
+    padding: 10px;
+    background-color: darkorange;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup-content form button:hover {
+    background-color: black;
+    color: white;
+}
+
+#adminCodeContainer {
+    display: none;
+}
+
+/* Users page */
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%;
+    }
+}

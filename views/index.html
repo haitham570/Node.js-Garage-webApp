@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoElite - Auto Maintenance & Repair Services</title>
+    <meta name="title" content="AutoElite - Auto Maintenance & Repair Services">
+    <meta name="description" content="This is a vehicle repair web app made by Haitham">
+
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/appointment.css">
+    
+
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+    <link rel="preload" as="image" href="/images/hero-bg.jpg">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="/images/logo.png" width="128" height="63" alt="AutoElite home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#" class="navbar-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link" id="aboutButton">About</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="navbar-link" id="servicesButton">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                    </li>
+                    <li id="billingLink" style="display: none;"><a href="billing.html" class="navbar-link">Billing</a></li>
+                    <li id="usersLink" style="display: none;"><a href="users.html" class="navbar-link">Users</a></li>
+                    
+                    <li class="dropdown" id="userDropdown" style="display: none;">
+                        <a href="#" class="navbar-link">User</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="experience.html" class="navbar-link">My Experience</a></li>
+                            <li><a href="appointment.html" class="navbar-link" id="appointmentButton">Book Appointment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="login.html" id="loginButton" class="btn btn-primary" >
+                <span class="span" id="loginButtonText">Login</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+        <article>
+            <section class="hero has-bg-image" aria-label="home" style="background-image:url('/images/hero-bg.jpg')">
+                <div class="container">
+                    <div class="hero-content">
+                        
+                        <h1 class="h1 section-title">Auto Maintenance & Repair Service</h1>
+
+                        <p class="section-text">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+                        </p>
+                        <a href="services.html" class="btn">
+                            <span class="span">Our Services</span>
+
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <figure class="hero-banner" style="--width: 1228; --height: 789;">
+                        <img src="/images/hero-banner.png" width="1228" height="789" alt="golden motor vehicle"
+                        class="move-anim">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="section service has-bg-image" aria-labelledby="service-label"
+            >
+            <div class="container">
+                <p class="section-subtitle :light" id="service-label">Our Services</p>
+                <h2 class="h2 section-title">We Provide Great Services For Your Vehicle</h2>
+                <div class="services-cards">
+                    <a href="services.html#oil-change" class="service-card" data-animate="fade-in">
+                        <img src="/images/service1.jpg" alt="service1">
+                        <h2>Oil Change</h2>
+                    </a>
+                    <a href="services.html#tire-repair" class="service-card" data-animate="fade-in">
+                        <img src="/images/service2.jpg" alt="service2">
+                        <h2>Tire Repair</h2>
+                    </a>
+                    <a href="services.html#engine-repair" class="service-card" data-animate="fade-in">
+                        <img src="/images/service3.jpg" alt="service3">
+                        <h2>Engine Repair</h2>
+                    </a>
+                    <a href="services.html#steering-repair" class="service-card" data-animate="fade-in">
+                        <img src="/images/service4.jpg" alt="service4">
+                        <h2>Steering Repair</h2>
+                    </a>
+                    <a href="services.html#brake-repair" class="service-card" data-animate="fade-in">
+                        <img src="/images/service5.jpg" alt="service5">
+                        <h2>Brake Repair</h2>
+                    </a>
+                </div>
+            </div>
+        
+        
+        
+            </section>
+
+            <section class="section about has-before" aria-labelledby="about-label" id="about">
+                <div class="container">
+                    <figure class="about-banner">
+                        <img src="/images/about-banner.png" width="540" height="540"
+                        loading="lazy" alt="vehicle repair equipments" class="w-100">
+                    </figure>
+                    <div class="about-content">
+                        <p class="section-subtitle :dark">About Us</p>
+                        <h2 class="h2 section-title">We Promise you the Quality</h2>
+                        <p class="section-text">
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et 
+                            quas molestias excepturi sint occaecati cupiditate non provident
+                        </p>
+
+                        <p class="section-text">
+                            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
+                            rerum facilis.
+                        </p>
+                        <ul class="about-list">
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">8K+</strong> Happy Clients
+                                </p>
+                            </li>
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">22+</strong> Instruments
+                                </p>
+                            </li>
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">15+</strong> Years In Market
+                                </p>
+                            </li>
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">99%</strong> Projects Completed
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <section class="section work" aria-labelledby="work-label">
+                <div class="container">
+                    <p class="section-subtitle :light" id="work-label">Our Work</p>
+                    <h2 class="h2 section-title">Latest Projects We Have Done</h2>
+                    <ul class="has-scrollbar">
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="/images/work-1.jpg" width="350" height="406" 
+                                    loading="lazy" alt="Engine Repair" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Auto Repair</p>
+                                    <h3 class="h3 card-title">Engine Repair</h3>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="/images/work-2.jpg" width="350" height="406" 
+                                    loading="lazy" alt="Car Tire Change" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Auto Repair</p>
+                                    <h3 class="h3 card-title">Car Tire Change</h3>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="/images/work-3.jpg" width="350" height="406" 
+                                    loading="lazy" alt="Battery Adjust" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Auto Repair</p>
+                                    <h3 class="h3 card-title">Battery Adjust</h3>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </article>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span" id="span-time">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span" id="span-time">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="./images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        "use strict";
+
+        const navbar = document.querySelector("[data-navbar]");
+        const navToggler = document.querySelector("[data-nav-toggler]");
+
+        navToggler.addEventListener("click", function(){
+            navbar.classList.toggle("active");
+            this.classList.toggle("active");
+        });
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const token = localStorage.getItem("token");
+            const loginButton = document.getElementById("loginButton");
+            const loginButtonText = document.getElementById("loginButtonText");
+            const billingLink = document.getElementById("billingLink");
+
+            if (token) {
+                loginButtonText.textContent = "Logout";
+                loginButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    localStorage.removeItem("token");
+                    window.location.href = "/";
+                });
+
+                
+                try {
+                    const response = await fetch("/api/auth/me", {
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    });
+                    const userData = await response.json();
+                    if (userData.userType === "admin") {
+                        billingLink.style.display = "block";
+                        usersLink.style.display = "block";
+                    }
+                    if (userData.userType === "customer"){
+                        userDropdown.style.display = "block";
+                    }
+                } catch (error) {
+                    console.error("Error fetching user data:", error);
+                }
+            } else {
+                loginButtonText.textContent = "Login";
+                loginButton.href = "login.html";
+            }
+
+            const observer = new IntersectionObserver((entries, observer)=>{
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.1});
+
+            document.querySelectorAll(".service-card").forEach(card=>{
+                observer.observe(card);
+            });
+        });
+
+    </script>
+
+    
+</body>
+</html>

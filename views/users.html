@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Info</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/billing.css">
+    <link rel="stylesheet" href="/login_style.css">
+    <link rel="stylesheet" href="/users.css">
+    
+    <link rel="shortcut icon" as="image" href="/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+<header class="header">
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="/images/logo.png" width="128" height="63" alt="AutoElite home">
+        </a>
+        <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="about.html" class="navbar-link">About</a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li>
+                    <a href="contact.html" class="navbar-link">Contact Us</a>
+                </li>
+                <li><a href="billing.html" class="navbar-link">Billing</a></li>
+                <li><a href="users.html" class="navbar-link">Users</a></li>
+            </ul>
+        </nav>
+        <a href="login.html" id="loginButton" class="btn btn-primary" >
+            <span class="span" id="loginButtonText">Login</span>
+            <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <span class="nav-toggle-icon icon-1"></span>
+            <span class="nav-toggle-icon icon-2"></span>
+            <span class="nav-toggle-icon icon-3"></span>
+        </button>
+    </div>
+</header>
+<body>
+    <main>
+        <article>
+            <section class="users-image" style="background-image:url('/images/3d-dark-grunge-display-background-with-smoky-atmosphere.jpg')">
+                    <div id="content-container">
+                        <div class="hero-content" id="content-users">
+                            <h1 class="h1 section-title">Users Profiles</h1>
+                            <div id="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>UserID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>UserType</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="UsersTableBody">
+                                        <!-- -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p id="errorDisplay" style="color: red; display: none;"></p>
+                        </div>
+                    </div>
+            </section>
+            <section class="users-image" style="background-image:url('/images/copy-space-calendar-with-pills-beside.jpg')">
+                <div id="appointment-container">
+                        <h1 class="h1 section-title" id="appointmenth1" style="color: white
+                        ;">Upcoming Appointments</>
+                        <div id="calendar">
+                            <table id="calendarTable">
+                                <thead>
+                                    <tr>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="appointmentPopup" class="appointmentPopup">
+                            <div class="popup-content">
+                                <span class="close">&times;</span>
+                                <h2>Appointment Details</h2>
+                                <div id="appointmentDetails"></div>
+                            </div>
+                        </div>
+                </div>
+                
+            </section>
+
+        </article>
+    </main>
+    <div id="feedbackPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>User Feedback</h2>
+            <div id="feedbackDetails"></div>
+            <button id="deleteFeedbackButton">Delete Feedback</button>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" width="128" height="63"
+                        alt="autoelite home">
+                    </a>
+                    <p class="footer-text">
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+                        voluptatibus maiores alias consequatur aut perferendis.
+                    </p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="/images/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="p">Monday to Friday</p>
+                        <span class="span">10:00 - 18:00</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday - Sunday</p>
+                        <span class="span">10:00 - 13:00</span>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+
+                    <li>
+                        <a href="tel:+01234567890" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+01 2 3456 7890</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@autoelite.com" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">info@autoelite.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span"> 3354 Sources Blvd, Dollard-Des Ormeaux, Quebec</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="/images/footer-shape-3.png" width="637" height="173"
+            loading="lazy" alt="Shape" class="shape shape-3 move-anim">
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, All Rights Reserved.</p>
+                <img src="/images/footer-shape-2.png" width="778" height="335"
+                loading="lazy" alt="Shape"
+                class="shape shape-2">
+
+                <img src="/images/footer-shape-2.png" width="805" height="652"
+                loading="lazy" alt="Red Car"
+                class="shape shape-1 move anim">
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        
+        "use strict";
+
+        const navbar = document.querySelector("[data-navbar]");
+        const navToggler = document.querySelector("[data-nav-toggler]");
+    
+        navToggler.addEventListener("click", function () {
+            navbar.classList.toggle("active");
+            this.classList.toggle("active");
+        });
+
+        document.addEventListener("DOMContentLoaded", async ()=>{
+            const token = localStorage.getItem("token");
+            const loginButton = document.getElementById("loginButton");
+            const loginButtonText = document.getElementById("loginButtonText");
+
+            let currentUserId = null;
+            let currentId = null;
+
+            if (token) {
+                loginButtonText.textContent = "Logout";
+                loginButton.addEventListener("click", (event)=>{
+                    event.preventDefault();
+                    localStorage.removeItem("token");
+                    window.location.href = "/";
+                });
+                const currentUser = await fetch("/api/auth/me", {
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                }).then(response => response.json());
+                currentId = currentUser._id
+                loadUsers(currentId);
+            }else {
+                loginButtonText.textContent = "Login";
+                loginButton.href = "login.html";
+            }
+
+            function loadUsers(currentId) {
+                fetch("/api/auth/users", {
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                })
+                .then(response=>response.json())
+                .then(users=>{
+                    const usersTableBody = document.getElementById("UsersTableBody");
+                    usersTableBody.innerHTML = "";
+                    
+                    users.filter(user => user._id !== currentId).forEach(user=>{
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                                <td>${user._id}</td>
+                                <td>${user.name}</td>
+                                <td>${user.email}</td>
+                                <td>${user.phone}</td>
+                                <td>${user.userType}</td>
+                                <td>
+                                    <button class="action-btn view-feedback-btn" data-id="${user._id}">Feedback</button>
+                                    <button class="action-btn delete-btn" data-id="${user._id}">Delete</button>
+                                </td>
+                        
+                        `;
+                        usersTableBody.appendChild(row);
+                    });
+
+                    document.querySelectorAll(".delete-btn").forEach(button=>{
+                        button.addEventListener("click", async(event)=>{
+                            const userId = event.target.getAttribute("data-id");
+                            
+                            confirmDelete(async(confirm)=>{
+                                if(confirm) {
+                                    try{
+                                        const response = await fetch(`/api/auth/users/${userId}`, {
+                                            method: "DELETE",
+                                            headers: {
+                                                "Authorization": `Bearer ${token}`
+                                            }
+                                        });
+    
+                                        if(!response.ok){
+                                            throw new Error("Failed to delete user");
+                                        }
+                                        loadUsers(currentId);
+                                        createMonthlyCalendar();
+                                        toastr.options = {
+                                            closeButton: true,
+                                            progressBar: true,
+                                            timeOut: 2000, // Set timeout to 2 seconds
+                                            extendedTimeOut: 0,
+                                            tapToDismiss: false
+                                        };
+                                        toastr.success("User deleted successfully");
+                                    }catch(err){
+                                        console.error("Error deleting user:", err);
+                                        toastr.options = {
+                                            closeButton: true,
+                                            progressBar: true,
+                                            timeOut: 2000, // Set timeout to 2 seconds
+                                            extendedTimeOut: 0,
+                                            tapToDismiss: false
+                                        };
+                                        toastr.error("Error deleting User");
+                                    }
+                                }else {
+                                    toastr.options = {
+                                        closeButton: true,
+                                        progressBar: true,
+                                        timeOut: 2000, // Set timeout to 2 seconds
+                                        extendedTimeOut: 0,
+                                        tapToDismiss: false
+                                    };
+                                    toastr.info("User deletion cancelled");
+                                }
+                            });
+                        });
+                    });
+
+                    document.querySelectorAll(".view-feedback-btn").forEach(button=>{
+                        button.addEventListener("click", async(event)=>{
+                            const userId = event.target.getAttribute("data-id");
+                            try{
+                                const response = await fetch(`/api/auth/users/${userId}/feedback`,{
+                                    headers: {
+                                        "Authorization": `Bearer ${token}`
+                                    }
+                                });
+                                if(!response.ok){
+                                    throw new Error("Failed to fetch feedback");
+                                }
+
+                                const feedback = await response.json();
+                                currentUserId = userId;
+                                displayFeedback(feedback);
+                            }catch(err){
+                                console.error("Error fetching feedback", err);
+                            }
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching user:", error);
+                    document.getElementById('errorDisplay').textContent = 'Error loading users.';
+                    document.getElementById('errorDisplay').style.display = 'block';
+                })
+            }
+
+            function confirmDelete(callback)  {
+                toastr.clear();
+                toastr.options = {
+                    closeButton: true,
+                    progressBar: true,
+                    timeOut: 0,
+                    extendedTimeOut: 0,
+                    tapToDismiss: false,
+                    onShown: function() {
+                        document.getElementById("confirmBtn").addEventListener("click", function () {
+                            toastr.remove();
+                            callback(true);
+                            
+                        });
+                        document.getElementById("cancelBtn").addEventListener("click", function () {
+                            toastr.remove();
+                            callback(false);
+                            
+                        });
+                    }
+                   
+                };
+                const message = `
+                    <div>
+                        <p>Are you sure you want to delete this User ?</p>
+                        <button id="confirmBtn" class="btn btn-danger">Yes</button>
+                        <button id="cancelBtn" class="btn btn-secondary">No</button>
+                    </div>
+                `;
+                toastr.warning(message);
+            }
+
+            function displayFeedback(feedback){
+                const feedbackPopup = document.getElementById("feedbackPopup");
+                const feedbackDetails = document.getElementById("feedbackDetails");
+                const deleteFeedbackButton = document.getElementById("deleteFeedbackButton");
+                document.body.classList.add("freeze-scroll");
+
+                if (feedback) {
+                    feedbackDetails.innerHTML = `<p>${feedback}</p>`;
+                    deleteFeedbackButton.style.display = "block";
+                   
+                } else {
+                    feedbackDetails.innerHTML = "<p>No feedback available.</p>";
+                    deleteFeedbackButton.style.display = "none"; // Hide the button
+                }
+                
+                feedbackPopup.style.display = "block";
+                document.querySelector(".popup .close").addEventListener("click", () => {
+                    feedbackPopup.style.display = "none";
+                    document.body.classList.remove("freeze-scroll");
+                });
+
+                window.addEventListener("click", (event)=>{
+                    if(event.target === feedbackPopup) {
+                        feedbackPopup.style.display = "none";
+                        document.body.classList.remove("freeze-scroll");
+                    }
+                });
+            }
+
+            document.getElementById("deleteFeedbackButton").addEventListener("click", async ()=>{
+                
+                try{
+                    console.log(`Deleting feedback for user ID: ${currentUserId}`);
+                    const response = await fetch(`/api/auth/users/${currentUserId}/feedback`, {
+                        method: "DELETE",
+                        headers: {
+                            "Authorization": `Bearer ${token}`,
+                            "Content-Type": "application/json"
+                        }
+                    });
+
+                    if (!response.ok){
+                        throw new Error("Failed to delete feedback");
+                    }
+
+                    toastr.success("Feedback deleted successfully");
+                    document.getElementById("feedbackPopup").style.display = "none";
+                    loadUsers(currentUserId);
+                }catch(err){
+                    console.error("Error deleting feedback ", err);
+                    toastr.error("Failed to delete feedback");
+                }
+            });
+
+            async function fetchAppointments() {
+                try {
+                    const response = await fetch("/api/auth/appointments", {
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    });
+        
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch appointments: ${response.statusText}`);
+                    }
+        
+                    return await response.json();
+                } catch (error) {
+                    console.error("Error fetching appointments:", error);
+                    return [];
+                }
+            }
+
+            function getDateForDay(year, month, day) {
+                const date = new Date(year, month, day);
+                return date.toISOString().split("T")[0];
+            }
+
+            function getDayName(dateString){
+                const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+                const date = new Date(dateString);
+                return daysOfWeek[date.getUTCDay()];
+            }
+
+            async function createMonthlyCalendar() {
+                const appointments = await fetchAppointments();
+                const tbody = document.querySelector("#calendarTable tbody");
+                tbody.innerHTML = "";
+                const startHour = 8;
+                const endHour = 16;
+                const timeTravel = 30;
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = now.getMonth();
+                const daysInMonth = new Date(year, month+1,0).getDate();
+
+                const headerRow = document.createElement("tr");
+                headerRow.innerHTML = `<th>Time\\Date</th>`;
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dateCell = document.createElement("th");
+                    const dateString = getDateForDay(year,month,day);
+                    dateCell.innerHTML = `${day}<br>${getDayName(dateString)}`;
+                    headerRow.appendChild(dateCell);
+                }
+                tbody.appendChild(headerRow);
+
+                for(let hour = startHour; hour <= endHour; hour++) {
+                    for (let minutes = 0; minutes < 60; minutes += timeTravel){
+                        const timeSlot = document.createElement("tr");
+                        const timeCell = document.createElement("td");
+                        const timeString = `${hour.toString().padStart(2,'0')}:${minutes.toString().padStart(2, '0')}`;
+
+                        timeCell.textContent = timeString;
+                        timeSlot.appendChild(timeCell);
+
+                        for(let day = 1; day <= daysInMonth; day++){
+                            const dayCell = document.createElement("td");
+                            dayCell.setAttribute("data-time", timeString);
+                            dayCell.setAttribute("data-date", getDateForDay(year, month, day));
+
+                            const appointment = appointments.find(app =>
+                            new Date(app.date).toISOString().split('T')[0] === getDateForDay(year, month, day) && app.time === timeString
+                            );
+
+                            if(appointment) {
+                                dayCell.textContent = appointment.name;
+                                const appointmentDate = appointment.date.split('T')[0];
+                                dayCell.appendChild(document.createElement('br'));
+                                dayCell.appendChild(document.createTextNode(appointmentDate));
+                            }
+
+                            dayCell.addEventListener("click", (event)=> {
+                                console.log(`Clicked on date: ${event.target.dataset.date} and time: ${event.target.dataset.time}`);
+                                showAppointmentPopup(event.target.dataset.date, event.target.dataset.time);
+                            });
+                            timeSlot.appendChild(dayCell);
+                        }
+                        tbody.appendChild(timeSlot);
+                    }
+                }
+            }
+
+            async function showAppointmentPopup(date, time) {
+                console.log(`Fetching appointment for ${date} at ${time}`);
+                const response = await fetch(`/api/auth/appointments/${date}/${time}`,{
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+
+                if(!response.ok){
+                    console.error("Failed to fetch appointment");
+                    throw new Error(`Failed to fetch appointment: ${response.statusText}`)
+                }
+                const appointment = await response.json();
+                console.log(`Fetched appointment: ${JSON.stringify(appointment)}`);
+                const appointmentDetails = document.getElementById("appointmentDetails");
+                const appointmentDate = appointment.date.split('T')[0];
+
+                if(appointment){
+                    appointmentDetails.innerHTML = `
+                        <table>
+                            <tr><th>Client Name:</th><td>${appointment.name}</td></tr>
+                            <tr><th>Email:</th><td> ${appointment.email}</td></tr>
+                            <tr><th>Car Model:</th><td> ${appointment.carModel}</td> </tr>
+                            <tr><th>Car Color:</th><td> ${appointment.carColor}</td> </tr>
+                            <tr><th>Licence Plate:</th><td> ${appointment.licencePlate}</td> </tr>
+                            <tr><th>Issues:</th><td>${appointment.issues}</td></tr>
+                            <tr><th>Issues:</th><td>${appointmentDate}</td></tr>
+                            <tr><th>Time:</th><td> ${appointment.time}</td> </tr>
+                        </table>
+                    `;
+                }else {
+                    appointmentDetails.innerHTML = "<p> No appointment found </p>"
+                }
+
+                const appointmentPopup = document.getElementById("appointmentPopup");
+                appointmentPopup.style.display = "block";
+                document.body.classList.add("freeze-scroll");
+
+                document.querySelector(".appointmentPopup .close").addEventListener("click", ()=>{
+                    appointmentPopup.style.display = "none";
+                    document.body.classList.remove("freeze-scroll");
+                });
+
+                window.addEventListener("click", (event)=>{
+                    if(event.target===appointmentPopup){
+                        appointmentPopup.style.display = "none";
+                        document.body.classList.remove("freeze-scroll");
+                    }
+                });
+            }
+
+            createMonthlyCalendar()
+        });
+    </script>
+    
+</body>
+</html>
